@@ -47,10 +47,56 @@ console.log('all the jedis:', jediText);
 
 //that's cool, but kind of ugly
 
-for (var potato = 0; potato < jedi.length; potato++) {
+for (var i = 0; i < jedi.length; i++) {
     //jediText is incrementally assigned each value
-    jediText += `<li>${jedi[potato]}</li>`;
+    jediText += `<li> Jedi number ${i} is ${jedi[i]}</li>`;
 }
 document.getElementById("demo").innerHTML = jediText;
+
+let colors = [ "red", "yellow", "blue", "green", "orange", "purple"];
+
+//reverse
+let reverseColors = colors.reverse();
+console.log("reverseColors", reverseColors);
+
+//sort (alphabetical)
+let sortedColors = colors.sort();
+console.log("sortedColors", sortedColors);
+
+//doesn't quite work as expected cause sort just looks at the first number
+let numbers = [1, 2, 5, 100, 73, 84, 88];
+// let sortedNumbers = numbers.sort();
+// console.log("sorted number", sortedNumbers);
+
+//but if we pass in a sort function to specify how to
+//handle each item...
+//each item is 
+// let sortedNumbers = numbers.sort(function(first, second) {
+//     console.log("first", first);
+//     console.log("second", second);
+//     console.log("first - second = ", first - second);
+//     return first - second;
+// });
+
+// console.log("better sortedNumbers", sortedNumbers);
+
+let fruits = ["Peaches", "Orange", "Lemon", "Banana", "Mango"];
+//first param is where to start (exclusive, and second is where wo stop (inclusive))
+let citrus = fruits.slice(1,3);
+console.log("citrus", citrus);
+//fruits is still fruits
+console.log("fruits",fruits);
+
+//wanna add to the end? use push
+fruits.push("Strawberry");
+console.log("pushed fruits", fruits);
+
+//wanna get the last item? pop it.
+let lastItem = fruits.pop();
+console.log("lastItem", lastItem);
+
+//this actually removed it from the array:
+console.log("fruits popped", fruits);
+
 
 
