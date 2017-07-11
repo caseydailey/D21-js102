@@ -98,5 +98,19 @@ console.log("lastItem", lastItem);
 //this actually removed it from the array:
 console.log("fruits popped", fruits);
 
+// now let's play with modulus
+// write a loop that starts at 100 and decrements a variable by 1.
+// If the number is even add the number to the beginning of the array, else add it to the end
+
+let evenOdds = [];
+for (var i = 100; i >= 0 ; i--) {
+    if (i % 2 === 0){
+        evenOdds.unshift(i);
+    } else {
+        evenOdds.push(i);
+    }
+}
+console.log("evenOdds", evenOdds);
+
 
 
